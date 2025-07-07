@@ -1,0 +1,1 @@
+<index.tsx content from earlier, too long to inline>
