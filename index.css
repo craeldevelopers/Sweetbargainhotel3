@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+:root {
+--background: 0 0% 99%;
+--foreground: 0 0% 15%;
+
+--card: 0 0% 100%;  
+--card-foreground: 0 0% 15%;  
+
+--popover: 0 0% 100%;  
+--popover-foreground: 0 0% 15%;  
+
+--primary: 51 100% 42%;  
+--primary-foreground: 0 0% 100%;  
+
+--secondary: 45 25% 95%;  
+--secondary-foreground: 0 0% 15%;  
+
+--muted: 45 25% 96%;  
+--muted-foreground: 0 0% 45%;  
+
+--accent: 45 25% 96%;  
+--accent-foreground: 0 0% 15%;  
+
+--destructive: 0 84.2% 60.2%;  
+--destructive-foreground: 210 40% 98%;  
+
+--border: 45 25% 90%;  
+--input: 45 25% 90%;  
+--ring: 51 100% 42%;  
+
+--radius: 0.75rem;
+
+}
+
+{
+@apply border-border;
+}
+
+
+body {
+@apply bg-background text-foreground font-sans antialiased;
+font-feature-settings: "cv11", "ss01";
+font-variation-settings: "opsz" 32;
+}
+
+html {
+scroll-behavior: smooth;
+}
+}
+
+@layer components {
+.glass-effect {
+@apply bg-white/80 backdrop-blur-sm border border-white/20;
+}
+
+.luxury-shadow {
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.hover-lift {
+@apply transition-all duration-300 ease-out;
+}
+
+.hover-lift:hover {
+@apply transform -translate-y-1 luxury-shadow;
+}
+}
+
+
